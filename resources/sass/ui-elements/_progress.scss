@@ -1,0 +1,95 @@
+.progress-meter.size-normal, .unit-progress {
+    width: 78px;
+    height: 78px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    .inner {
+        width: 78px;
+        height: 78px;
+        display: flex;
+        align-items: center;
+        span {
+            self-align: center;
+            font-size: $small-font;
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+}
+
+.progress-meter.size-large {
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    .inner {
+        width: 96px;
+        height: 96px;
+        display: flex;
+        align-items: center;
+        span {
+            self-align: center;
+            font-size: $large-font;
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+}
+
+.progress-meter.size-normal {
+    background-image: url(/img/progress-meter.png);
+    background-size: 78px 1950px;
+}
+
+.unit-progress {
+    background-image: url(/img/unit-progress.png);
+    background-size: 78px 858px;
+}
+
+.progress-meter.size-large {
+    background-image: url(/img/progress-meter-large.png);
+    background-size: 96px 2400px;
+}
+
+@for $i from 0 through 24 {
+    .progress-meter.size-normal.v-#{$i} {
+        background-position: 0 -#{(24 - $i) * 78}px;
+    }
+}
+
+@for $i from 0 through 10 {
+    .unit-progress.v-#{$i} {
+        background-position: 0 -#{(10 - $i) * 78}px;
+    }
+}
+
+@for $i from 0 through 24 {
+    .progress-meter.size-large.v-#{$i} {
+        background-position: 0 -#{(24 - $i) * 96}px;
+    }
+}
+
+.flat-unit-progress {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    .bars {
+        display: flex;
+        flex-wrap: nowrap;
+        > div {
+            height: 12px;
+            width: 20px;
+            background-color: $opaque-panel-color;
+            margin: 0 2px;
+            opacity: 0.5;
+            &.filled {
+                opacity: 1;
+            }
+        }
+    }
+    .numbers {
+        margin-left: 10px;
+        color: $opaque-panel-color;
+    }
+}

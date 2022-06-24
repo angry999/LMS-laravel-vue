@@ -1,0 +1,35 @@
+.retry-dialog {
+    .el-dialog__body {
+        padding: 10px;
+    }
+    .options {
+        display: flex;
+        flex-direction: column;
+        .el-button {
+            margin: 0;
+            transition-property: background;
+        }
+        .el-button + .el-button {
+            margin-top: 10px;
+        }
+    }
+    .tips {
+        display: flex;
+        flex-direction: column;
+        ol {
+            margin: 0 0 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            list-style-position: inside;
+            padding: 0;
+            text-align: center;
+            li + li {
+                margin-top: 10px;
+            }
+        }
+        .el-button {
+            transition-property: background;
+        }
+    }
+}

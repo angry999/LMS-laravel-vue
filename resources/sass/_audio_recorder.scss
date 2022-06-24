@@ -1,0 +1,44 @@
+.ar-player {
+    width: 51px;
+    height: 51px;
+    border: 0;
+    border-radius: 100%;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: unset;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    &__play {
+        width: 51px;
+        height: 51px;
+        background-repeat: no-repeat;
+        background-image: url(/img/play_icon.png);
+        background-size: 51px 51px;
+        &--active {
+            background-image: url(/img/pause_icon.png);
+            &:hover {
+                fill: #505050 !important;
+            }
+        }
+    }
+}
+
+.ar-recorder__duration {
+    position: absolute;
+    color: black;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+.audio-btn-disabled {
+    opacity: 0.6 !important;
+}
+
+.audio-recorer-wrpper {
+    position: absolute;
+    width: 100%;
+    top: 545px;
+}

@@ -1,0 +1,72 @@
+.about-component.container {
+    padding: 60px 0 20px 0;
+    .about-text {
+        border: 1px solid #fff;
+        padding: 0 20px;
+        .about-text-inner {
+            padding: 30px 0;
+            p + p {
+                margin-top: 15px;
+            }
+            .footer {
+                font-size: $small-font;
+            }
+            .logo {
+                background-image: url(/img/logo.png);
+                background-repeat: no-repeat;
+                background-position: center top;
+                background-size: 64px 64px;
+                padding: 74px 0 15px 0;
+                text-transform: uppercase;
+                text-align: center;
+                font-size: $large-font;
+            }
+            hr {
+                border: none;
+                border-top: 1px solid #fff;
+            }
+            .logos {
+                display: flex;
+                padding: 15px;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                background: #fff;
+                img {
+                    max-width: 45%;
+                }
+            }
+            ul {
+                list-style: none;
+                li {
+                    position: relative;
+                }
+                li:before {
+                    display: block;
+                    position: absolute;
+                    content: ' ';
+                }
+                li + li {
+                    margin-top: 10px;
+                }
+                &.dashes {
+                    li:before {
+                        width: 10px;
+                        border-top: 1px solid #fff;
+                        top: 9px;
+                        left: -18px;
+                    }
+                }
+                &.circles {
+                    li:before {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: #CD8F12;
+                        top: 4px;
+                        left: -18px;
+                    }
+                }
+            }
+        }
+    }
+}

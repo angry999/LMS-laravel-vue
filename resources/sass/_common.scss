@@ -1,0 +1,122 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #161B2A;
+    color: $primary-font-color;
+    font-family: $primary-font;
+    font-size: $normal-font;
+}
+
+a {
+    color: $primary-font-color;
+    font-family: $primary-font;
+}
+
+p {
+    margin: 0;
+    line-height: 150%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    height: 100%;
+}
+
+.view-wrapper {
+    background: url(/img/common-bg.jpg) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.centered-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    &.has-titlebar {
+        padding-top: 42px;
+    }
+    &.scrollable {
+        height: 100%;
+    }
+}
+
+.full-height {
+    height: 100%;
+}
+
+.narrow-layout {
+    width: $narrow-layout-width;
+}
+
+.standard-layout {
+    width: $standard-layout-width;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.small-font {
+    font-size: $small-font;
+}
+
+.large-font {
+    font-size: $large-font;
+}
+
+@for $i from 0 through 5 {
+    .mt-#{$i * 10} {
+        margin-top: 10px * $i;
+    }
+    
+    .mb-#{$i * 10} {
+        margin-bottom: 10px * $i;
+    }
+}
+
+@mixin sprite-item($index: 0, $size: 48) {
+    background-position: 0 -#{$index * $size}px;
+}
+
+@keyframes elastic-scale {
+    0% {
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(1.25);
+    }
+    40% {
+        transform: scale(0.8);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    80% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

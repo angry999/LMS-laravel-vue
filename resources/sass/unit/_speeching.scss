@@ -1,0 +1,169 @@
+.unit-reading-container {
+    height: 100%;
+    >.el-loading-mask {
+        background: none;
+        .el-loading-spinner {
+            width: 200px;
+            left: 50%;
+            margin-left: -110px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            .el-loading-text {
+                flex-grow: 1;
+                align-self: center;
+            }
+        }
+    }
+    .video-player-wrapper {
+        position: relative;
+        padding: 15px 0;
+        .sentence-result {
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .speech-guide-wrapper {
+        width: 100%;
+        height: 210px;
+        border: none;
+    }
+    iframe {
+        border: none !important;
+        >body {
+            border: none !important;
+        }
+        .body-all {
+            border: none !important;
+        }
+    }
+    iframe>body {
+        background-color: black
+    }
+    .preview {
+        margin: 15px auto;
+        width: 100%;
+        height: $player-normal-height;
+        background-size: cover;
+        background-position: center;
+        .overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            .v-play-false {
+                align-self: center;
+                margin: 0 auto;
+                cursor: pointer;
+                width: 48px;
+                height: 48px;
+                display: inline-block;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-image: url(/img/icons-set-48.png);
+                background-size: 48px 192px;
+            }
+            .v-play-true {
+                align-self: center;
+                margin: 0 auto;
+                cursor: pointer;
+                width: 48px;
+                height: 48px;
+                display: inline-block;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-image: url(/img/stop_icon.png);
+                background-size: 48px 48px;
+            }
+        }
+    }
+    .speeching-actions {
+        display: flex;
+        justify-content: center;
+        >span {
+            margin: 0 10px;
+            position: relative;
+            width: 51px;
+            height: 51px;
+            display: inline-block;
+            .loading-container {
+                width: 51px;
+                height: 51px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                .overlay {
+                    width: 100%;
+                    height: 100%;
+                }
+                .el-loading-mask {
+                    background-color: rgba(255, 255, 255, 0.3);
+                    border-radius: 100%;
+                }
+            }
+            .icon-replay-video {
+                opacity: 0.9;
+                width: 51px;
+                height: 51px;
+                display: inline-block;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-image: url(/img/play_movie_icon.png);
+                background-size: 51px 51px;
+            }
+            .icon-retry-speak {
+                opacity: 1;
+                width: 51px;
+                height: 51px;
+                display: inline-block;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-image: url(/img/microphone_icon.png);
+                background-size: 51px 51px;
+            }
+            .icon-stop-speak {
+                opacity: 1;
+                width: 51px;
+                height: 51px;
+                display: inline-block;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-image: url(/img/stop_icon.png);
+                background-size: 51px 51px;
+                cursor: pointer;
+            }
+            .icon-replay-audio {
+                opacity: 0.9;
+                width: 51px;
+                height: 51px;
+                display: inline-block;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-image: url(/img/play_icon.png);
+                background-size: 51px 51px;
+            }
+        }
+        a {
+            opacity: 0.1;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.gudence-speech-play {
+    margin: auto;
+    cursor: pointer;
+}
+
+.mic-text {
+    margin-top: -14px;
+    margin-bottom: 12px;
+}

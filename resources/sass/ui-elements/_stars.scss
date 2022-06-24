@@ -1,0 +1,107 @@
+.stars {
+    span {
+        display: inline-block;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+    &.size-normal {
+        span {
+            width: 91px;
+            height: 24px;
+            background-image: url(/img/stars.png);
+            background-size: 91px 96px;
+            &.v-0 {
+                @include sprite-item(3, 24);
+            }
+            &.v-1 {
+                @include sprite-item(2, 24);
+            }
+            &.v-2 {
+                @include sprite-item(1, 24);
+            }
+            &.v-3 {
+                @include sprite-item(0, 24);
+            }
+        }
+    }
+    &.size-tiny {
+        span {
+            width: 46px;
+            height: 12px;
+            background-size: 46px 48px;
+            background-image: url(/img/stars-tiny.png);
+            &.v-0 {
+                @include sprite-item(3, 12);
+            }
+            &.v-1 {
+                @include sprite-item(2, 12);
+            }
+            &.v-2 {
+                @include sprite-item(1, 12);
+            }
+            &.v-3 {
+                @include sprite-item(0, 12);
+            }
+        }
+    }
+    &.size-large {
+        span {
+            width: 122px;
+            height: 32px;
+            background-image: url(/img/stars-large.png);
+            background-size: 122px 128px;
+            &.v-0 {
+                @include sprite-item(3, 32);
+            }
+            &.v-1 {
+                @include sprite-item(2, 32);
+            }
+            &.v-2 {
+                @include sprite-item(1, 32);
+            }
+            &.v-3 {
+                @include sprite-item(0, 32);
+            }
+        }
+    }
+    &.size-larger {
+        span {
+            width: 165px;
+            height: 44px;
+            background-image: url(/img/stars-larger.png);
+            background-size: 165px 176px;
+            &.v-0 {
+                @include sprite-item(3, 44);
+            }
+            &.v-1 {
+                @include sprite-item(2, 44);
+            }
+            &.v-2 {
+                @include sprite-item(1, 44);
+            }
+            &.v-3 {
+                @include sprite-item(0, 44);
+            }
+        }
+    }
+    &.size-largest {
+        span {
+            width: 175px;
+            height: 65px;
+            background-image: url(/img/stars-largest.png);
+            background-size: 175px 260px;
+            &.v-0 {
+                @include sprite-item(3, 65);
+            }
+            &.v-1 {
+                @include sprite-item(2, 65);
+            }
+            &.v-2 {
+                @include sprite-item(1, 65);
+            }
+            &.v-3 {
+                @include sprite-item(0, 65);
+            }
+        }
+    }
+}

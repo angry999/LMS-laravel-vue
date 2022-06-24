@@ -1,0 +1,21 @@
+.form-row {
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: $small-font;
+    }
+}
+.form-row + .form-row {
+    margin-top: 10px;
+}
+.narrow-form {
+    button {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    input {
+        text-align: center;
+        color: black;
+    }
+}

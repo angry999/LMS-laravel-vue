@@ -1,0 +1,112 @@
+.subtitle {
+    margin: 5px 0 15px 0;
+    position: relative;
+    border-radius: 4px;
+    .subtitle-text {
+        color: $secondary-font-color;
+        font-size: $normal-font;
+        flex-grow: 1;
+        align-self: center;
+    }
+    .spike {
+        position: absolute;
+        width: 25px;
+        height: 15px;
+        overflow: hidden;
+        &:before {
+            content: ' ';
+            width: 200%;
+            height: 400%;
+            border-radius: 50%;
+            display: block;
+            position: relative;
+        }
+    }
+}
+.subtitle:not(.double) {
+    .subtitle-inner {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    &.speaker-1 {
+        background-color: $speaker-panel-color;
+        .spike {
+            top: -15px;
+            left: 30%;
+            &:before {
+                background-color: $speaker-panel-color;
+                left: -100%;
+            }
+        }
+        .subtitle-inner {
+            padding: 15px 30px;
+        }
+    }
+    &.speaker-2 {
+        background-color: $native-speaker-panel-color;
+        .spike {
+            bottom: -15px;
+            left: 70%;
+            &:before {
+                background-color: $native-speaker-panel-color;
+                top: -300%;
+            }
+        }
+        .subtitle-text {
+            padding-left: 15px;
+        }
+        .subtitle-inner {
+            padding: 15px 30px 15px 15px;
+        }
+    }
+}
+.subtitle.double {
+    .mic-indicator {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        margin-top: -35px;
+        z-index: 1;
+    }
+    .subtitle-text {
+        padding: 15px 30px 15px 100px;
+        background: $native-speaker-panel-color;
+        border-radius: 4px 4px 0 0;
+        position: relative;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        &:before {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            content: 'A';
+            border: 1px solid #ECA052;
+            color: #ECA052;
+            border-radius: 50%;
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+    }
+    .subtitle-text + .subtitle-text {
+        border-radius: 0 0 4px 4px;
+        margin-top: 5px;
+        &:before {
+            content: 'B';
+            top: 40px;
+            bottom: auto;
+        }
+    }
+    .spike {
+        bottom: -15px;
+        left: 70%;
+        &:before {
+            background-color: $native-speaker-panel-color;
+            top: -300%;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.video-player {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #000;
+    .preview {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: $player-normal-height;
+        background-color: rgba(0,0,0, 0.8);
+        video {
+            display: none;
+        }
+    }
+    &.playing .preview video{
+        display: block;
+    }
+    .progress {
+        position: absolute;
+        z-index: 1;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        height: 4px;
+        background-color: rgba(60,60,60, 0.5);
+        border-radius: 2px;
+        overflow: hidden;
+        .bar {
+            height: 4px;
+            background-color: #FAC600;
+        }
+    }
+    .el-loading-mask {
+        background: none;
+    }
+}
+
+@media screen and (max-height: $player-scale-at) {
+    .video-player .preview {
+        height: $player-max-height;
+    }
+}

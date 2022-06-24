@@ -1,0 +1,57 @@
+@import "~element-ui/packages/theme-chalk/src/base";
+@import "~element-ui/packages/theme-chalk/src/row";
+@import "~element-ui/packages/theme-chalk/src/col";
+@import "~element-ui/packages/theme-chalk/src/input";
+@import "~element-ui/packages/theme-chalk/src/button";
+@import "~element-ui/packages/theme-chalk/src/notification";
+@import "~element-ui/packages/theme-chalk/src/loading";
+@import "~element-ui/packages/theme-chalk/src/dialog";
+
+.el-notification.alert-info {
+    background-color: #409EFF;
+}
+
+.el-notification.alert-error {
+    background-color: #FF4740;
+}
+
+.el-notification__content {
+    text-align: left;
+}
+
+.el-loading-mask.is-fullscreen {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.el-dialog {
+    color: $secondary-font-color;
+    width: 500px;
+}
+
+.el-dialog .el-dialog__body {
+    color: $secondary-font-color;
+}
+
+.el-dialog.without-header {
+    .el-dialog__header {
+        display: none;
+    }
+}
+
+.el-button {
+    position: relative;
+    .icon-32, .icon-48 {
+        position: absolute;
+        top: 50%;
+    }
+    .icon-32 {
+        left: 7px;
+        margin-top: -16px;
+        transform: scale(0.7);
+    }
+    .icon-48 {
+        left: 0;
+        margin-top: -24px;
+        transform: scale(0.7);
+    }
+}

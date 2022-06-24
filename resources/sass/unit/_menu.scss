@@ -1,0 +1,95 @@
+.unit-menu-component {
+    .preview {
+        margin: 15px auto;
+        width: 100%;
+        height: $player-normal-height;
+        background-size: cover;
+        background-position: center;
+        .overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255,255,255, 0.2);
+            .play {
+                align-self: center;
+                margin: 0 auto;
+            }
+        }
+    }
+    .activities {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 0 -16px 0 -6px;
+        padding: 0 1px;
+        .activity {
+            display: flex;
+            width: 170px;
+            height: 66px;
+            margin: 5px 6px;
+            padding: 5px;
+            background-color: $opaque-panel-color;
+            align-items: center;
+            text-decoration: none;
+            .number {
+                font-size: $large-font;
+                display: inline-block;
+                margin: 0 0 3px 8px;
+            }
+            .body {
+                flex-grow: 1;
+                height: 100%;
+            }
+            .icon-2x {
+                margin-right: 5px;
+            }
+            &.quiz {
+                width: 716px;
+                .body {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                .inner {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-grow: 1;
+                    margin-right: 34px;
+                    margin-top: 5px;
+                }
+            }
+            &.locked.reading {
+                background-color: $semi-opaque-panel-color;
+                .body {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                .icon-32 {
+                    margin-left: 45px;
+                    align-self: center;
+                }
+            }
+            &.locked.quiz {
+                background-color: $semi-opaque-panel-color;
+            }
+            &.completed.quiz {
+                background-color: #00E4CC;
+                .qiuz-passed {
+                    width: 60px;
+                    height: 48px;
+                    background: url(/img/quiz-passed.png) no-repeat center center;
+                    background-size: 60px 48px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-height: $player-scale-at) {
+    .unit-menu-component .preview {
+        height: $player-max-height;
+    }
+}

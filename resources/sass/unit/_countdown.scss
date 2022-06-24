@@ -1,0 +1,17 @@
+.el-dialog.countdown-dialog {
+    background-color: $opaque-panel-color;
+    .el-dialog__header {
+        display: none;
+    }
+    .counter {
+        font-size: $large-font;
+        color: $primary-font-color;
+        padding-top: 5px;
+        .text {
+            opacity: 0.75;
+        }
+        .number {
+            font-size: $xlarge-font;
+        }
+    }
+}

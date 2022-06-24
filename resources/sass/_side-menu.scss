@@ -1,0 +1,103 @@
+.side-menu {
+    z-index: 3000;
+    position: fixed;
+    top: 0;
+    left: -$menu-width;
+    bottom: 0;
+    width: $menu-width;
+    background: $menu-background;
+    transition: left 300ms linear;
+    > .menu-inner {
+        position: relative;
+        width: 100%;
+        padding: 15px;
+        > .menu-icon {
+            background: $menu-background;
+            position: absolute;
+            top: 0;
+            right: -32px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            span {
+                display: block;
+            }
+        }
+    }
+    &.visible {
+        left: 0;
+    }
+    .menu-items {
+        padding-top: 10px;
+        > a {
+            display: block;
+            margin: 3px 0;
+            padding: 17px 17px 17px 60px;
+            text-decoration: none;
+            background: #2194ED;
+            position: relative;
+            opacity: 0.9;
+            &:hover {
+                opacity: 1;
+            }
+            &:before {
+                position: absolute;
+                width: 48px;
+                height: 48px;
+                content: ' ';
+                display: block;
+                top: 2px;
+                left: 1px;
+                overflow: hidden;
+                background-repeat: no-repeat;
+                background-image: url(/img/side-menu-icons.png);
+                background-size: 48px 480px;
+            }
+            &.home {
+                background: #1F71B0;
+                &:before {
+                    @include sprite-item(8, 48);
+                }
+            }
+            &.logout {
+                background: #2194ED;
+                &:before {
+                    @include sprite-item(7, 48);
+                }
+            }
+            &.join {
+                background: #4BCCF2;
+                &:before {
+                    @include sprite-item(6, 48);
+                }
+            }
+            &.about {
+                background: #FFA349;
+                &:before {
+                    @include sprite-item(0, 48);
+                }
+            }
+            &.contact {
+                background: #F6774A;
+                &:before {
+                    @include sprite-item(2, 48);
+                }
+            }
+            &.gift {
+                background: #FF4D4D;
+                &:before {
+                    @include sprite-item(9, 48);
+                }
+            }
+        }
+    }
+    .logo {
+        font-size: $large-font;
+        text-transform: uppercase;
+        span {
+            font-weight: bold;
+        }
+    }
+}

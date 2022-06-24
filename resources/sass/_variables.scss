@@ -1,0 +1,52 @@
+/* Layout */
+$narrow-layout-width: 300px;
+$standard-layout-width: 720px;
+$menu-width: 280px;
+$player-normal-height: 540px;
+$player-max-height: 55vh;
+$player-scale-at: 900px;
+
+/* Colors */
+$primary-font-color: #fff;
+$secondary-font-color: #444;
+$menu-background: rgba(0,0,0, 0.3);
+$panel-color: rgba(0,0,0, 0.3);
+$semi-opaque-panel-color: rgba(255,255,255, 0.5);
+$opaque-panel-color: #2194ED;
+$speaker-panel-color: mix($opaque-panel-color, #fff, 60%);
+$native-speaker-panel-color: #fff;
+$correct-color: #00CC67;
+$incorrect-color: #FF6138;
+
+/* Fonts */
+$primary-font: Arial;
+
+/* Font sizes */
+$small-font: 14px;
+$normal-font: 16px;
+$large-font: 22px;
+$xlarge-font: 28px;
+$xxlarge-font: 32px;
+$xxxlarge-font: 48px;
+
+/* Element-ui */
+$--font-size-base: $normal-font;
+/*$--color-text-regular: $primary-font-color;*/
+$--color-text-regular: $secondary-font-color;
+$--border-color-base: #44BADD;
+$--border-radius-base: 2px;
+$--border-color-hover: $--border-color-base;
+$--input-fill: transparent;
+$--input-fill-disabled: $--input-fill;
+$--input-color-disabled: mix($--color-text-regular, #000, 60%);
+$--color-text-placeholder: #44BADD;
+$--notification-border-color: transparent;
+$--notification-info-color: #fff;
+$--notification-danger-color: #fff;
+$--notification-close-color: #eee;
+$--notification-close-hover-color: #fff;
+$--notification-title-color: $--color-text-regular;
+$--button-warning-color: $secondary-font-color;
+$--button-warning-fill: #F2D100;
+$--button-warning-border: $--button-warning-fill;
+$--button-font-size: $normal-font;

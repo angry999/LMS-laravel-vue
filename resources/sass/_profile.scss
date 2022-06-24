@@ -1,0 +1,84 @@
+.profile-container {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        .header {
+            min-height: 40%;
+            background-color: mix($opaque-panel-color, #fff, 60%);
+            .avatar {
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-image: url(/img/profile-picture.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 30px auto 0 auto;
+            }
+            .username {
+                text-align: center;
+            }
+        }
+        .body {
+            flex-grow: 1;
+            .scores {
+                width: 350px;
+                margin: 0 auto;
+                transform: translateY(-50%);
+                height: 100px;
+                display: flex;
+                justify-content: streth;
+                > div {
+                    width: 33%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px 0 5px 0;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    > div {
+                        flex-grow: 1;
+                        display: flex;
+                        align-items: center;
+                        font-size: $xlarge-font;
+                    }
+                    > small {
+                        font-size: $small-font;
+                    }
+                }
+                .sentences {
+                    background-color: #5095E8;
+                    background-image: url(/img/my-progress-speaking.png);
+                }
+                .quiz {
+                    background-color: #B37EE3;
+                    background-image: url(/img/my-progress-quiz.png);
+                }
+                .coverage {
+                    background-color: #5BCF9F;
+                    background-image: url(/img/my-progress-coverage.png);
+                }
+            }
+        }
+        .footer {
+            padding: 70px 0;
+            display: flex;
+            justify-content: center;
+            .el-button {
+                position: relative;
+                width: 40%;
+                height: 34px;
+                text-align: left;
+                padding-top: 0;
+                padding-bottom: 0;
+                .flag-icon {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    border-radius: 0 2px 2px 0;
+                }
+            }
+        }
+    }
+}

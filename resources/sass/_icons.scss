@@ -1,0 +1,102 @@
+.icon-32 {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: url(/img/icons-set-32.png);
+    background-size: 32px 800px;
+    &.icon-back {
+        @include sprite-item(1, 32);
+        &:hover {
+            @include sprite-item(0, 32);
+        }
+    }
+    &.icon-burger {
+        @include sprite-item(3, 32);
+        &:hover {
+            @include sprite-item(2, 32);
+        }
+    }
+    &.icon-speaking {
+        @include sprite-item(4, 32);
+    }
+    &.icon-next {
+        @include sprite-item(6, 32);
+    }
+    &.icon-vocabulary-blue {
+        @include sprite-item(7, 32);
+    }
+    &.icon-replay-video {
+        @include sprite-item(8, 32);
+    }
+    &.icon-retry-speak {
+        @include sprite-item(9, 32);
+    }
+    &.icon-replay-audio {
+        @include sprite-item(10, 32);
+    }
+    &.icon-lamp {
+        @include sprite-item(11, 32);
+    }
+    &.icon-repeat {
+        @include sprite-item(12, 32);
+    }
+    &.icon-forward {
+        @include sprite-item(13, 32);
+    }
+    &.icon-info {
+        @include sprite-item(14, 32);
+    }
+    &.icon-check {
+        @include sprite-item(15, 32);
+    }
+    &.icon-cross {
+        @include sprite-item(16, 32);
+    }
+    &.icon-play {
+        @include sprite-item(18, 32);
+        &:hover {
+            @include sprite-item(17, 32);
+        }
+    }
+    &.icon-pause {
+        @include sprite-item(20, 32);
+        &:hover {
+            @include sprite-item(19, 32);
+        }
+    }
+    &.icon-arrow {
+        @include sprite-item(21, 32);
+    }
+    &.icon-lock {
+        @include sprite-item(22, 32);
+    }
+    &.icon-sound {
+        @include sprite-item(23, 32);
+    }
+    &.icon-2x {
+        @include sprite-item(24, 32);
+    }
+}
+.icon-48 {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: url(/img/icons-set-48.png);
+    background-size: 48px 192px;
+    &.icon-play {
+        @include sprite-item(0, 48);
+    }
+    &.icon-quiz {
+        @include sprite-item(1, 48);
+    }
+    &.icon-timer {
+        @include sprite-item(2, 48);
+    }
+    &.icon-dots {
+        @include sprite-item(3, 48);
+    }
+}

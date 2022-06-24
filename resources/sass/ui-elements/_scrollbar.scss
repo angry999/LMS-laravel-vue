@@ -1,0 +1,55 @@
+.vue-scrollbar__wrapper {
+    margin: 0 -15px -15px 0;
+    padding: 0 15px 15px 0;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+.vue-scrollbar-transition, .vue-scrollbar__scrollbar-vertical, .vue-scrollbar__scrollbar-horizontal {
+    transition: all 0.5s ease;
+}
+.vue-scrollbar-transition--scrollbar {
+    transition: opacity 0.5s linear;
+}
+.vue-scrollbar__scrollbar-vertical, .vue-scrollbar__scrollbar-horizontal {
+    opacity: 0.5;
+    position: absolute;
+    background: transparent;
+}
+.vue-scrollbar__wrapper:hover {
+    .vue-scrollbar__scrollbar-vertical, .vue-scrollbar__scrollbar-horizontal {
+        opacity: 1;
+    }
+}
+.vue-scrollbar__scrollbar-vertical:hover, .vue-scrollbar__scrollbar-horizontal:hover {
+    background: rgba(255,255,255, 0.5);
+}
+.vue-scrollbar__scrollbar-vertical .scrollbar, .vue-scrollbar__scrollbar-horizontal .scrollbar {
+    position: relative;
+    background: $primary-font-color;
+    cursor: default;
+}
+.vue-scrollbar__scrollbar-vertical {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    right: 2px;
+}
+.vue-scrollbar__scrollbar-vertical .scrollbar {
+    width: 4px;
+    border-radius: 2px;
+    margin-left: -1px;
+    margin-right: -1px;
+}
+.vue-scrollbar__scrollbar-horizontal {
+    height: 2px;
+    width: 100%;
+    bottom: 2px;
+    right: 0;
+}
+.vue-scrollbar__scrollbar-horizontal .scrollbar {
+    height: 4px;
+    border-radius: 2px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}

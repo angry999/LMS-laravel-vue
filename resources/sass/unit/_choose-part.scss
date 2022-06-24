@@ -1,0 +1,26 @@
+.el-dialog.choose-part-dialog {
+    .role-buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .el-button {
+        margin: 0;
+        position: relative;
+        width: 168px;
+        padding-top: 130px;
+        .icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 2px 2px 0 0;
+        }
+    }
+    .el-button + .el-button {
+        margin: 0;
+    }
+}

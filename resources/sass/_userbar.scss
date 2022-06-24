@@ -1,0 +1,23 @@
+.component-userbar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+    padding-top: 20px;
+    height: 150px;
+    .avatar {
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-image: url(/img/profile-picture.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+    }
+    .username {
+        text-align: center;
+        text-decoration: none;
+    }
+}

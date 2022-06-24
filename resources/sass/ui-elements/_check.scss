@@ -1,0 +1,20 @@
+.check-container {
+    span {
+        display: inline-block;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        margin-left: 34px;
+        &.v-checked {
+            background-image: url(/img/img-check.png);
+            width: 26px;
+            height: 26px;
+            background-size: 26px 26px;
+        }
+        &.v-unchecked {
+            // background-image: url(/img/img-uncheck.png);
+            width: 26px;
+            height: 31px;
+            background-size: 26px 31px;
+        }
+    }
+}

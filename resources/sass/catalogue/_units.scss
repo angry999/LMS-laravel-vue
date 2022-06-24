@@ -1,0 +1,88 @@
+.units-component {
+    .units-container {
+        padding: 15px 0;
+    }
+    .category-details {
+        background-color: $semi-opaque-panel-color;
+        padding: 0 10px 10px 10px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-bottom: 15px;
+        height: 120px;
+        > div {
+            align-self: center;
+        }
+        > .details {
+            flex-grow: 1;
+            > div {
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+            .primary {
+                > div {
+                    self-align: center;
+                }
+                .icon {
+                    width: 78px;
+                    height: 78px;
+                    background-size: contain;
+                    background-position: center;
+                }
+                .title {
+                    flex-grow: 1;
+                    font-weight: bold;
+                    font-size: $large-font;
+                    padding: 0 10px;
+                }
+            }
+            .secondary {
+                .level {
+                    width: 78px;
+                    .difficulty {
+                        margin: 0 auto;
+                    }
+                }
+                .sub-title {
+                    flex-grow: 1;
+                    font-size: $small-font;
+                    padding: 0 10px;
+                }
+            }
+        }
+        > .progress-meter {
+            margin-top: 10px;
+        }
+    }
+    
+    .unit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-right: 10px;
+        background-color: $semi-opaque-panel-color;
+        text-decoration: none;
+        .preview {
+            width: 150px;
+            height: 120px;
+            background-position: center;
+            background-size: cover;
+        }
+        .details {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            height: 120px;
+            .title {
+                font-size: $large-font;
+                margin-bottom: 8px;
+            }
+            .sub-title {
+                flex-grow: 1;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
